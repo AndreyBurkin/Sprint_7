@@ -1,4 +1,4 @@
-package SerializationJson;
+package serializationJson;
 
 public class Order {
     private String firstName;
@@ -26,7 +26,8 @@ public class Order {
         this.color = color;
     }
 
-    public String getFirstName() { return firstName;
+    public String getFirstName() {
+        return firstName;
     }
 
     public void setFirstName(String firstName) {

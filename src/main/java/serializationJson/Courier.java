@@ -1,11 +1,11 @@
-package SerializationJson;
+package serializationJson;
 
 public class Courier {
 
-       private String login;
-       private String password;
-       private String firstName;
-       private String id;
+    private String login;
+    private String password;
+    private String firstName;
+    private String id;
 
     //Конструктор для создания курьера.
     public Courier(String login, String password, String firstName) {
@@ -20,7 +20,6 @@ public class Courier {
         this.password = password;
     }
 
-
     //Конструктор для удаления курьера.
     public Courier(String id) {
         this.id = id;
@@ -30,7 +29,6 @@ public class Courier {
     public Courier() {
 
     }
-
 
     public String getLogin() {
         return login;

@@ -1,16 +1,16 @@
-package Pens;
+package pens;
 
-import SerializationJson.Courier;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
+import serializationJson.Courier;
 
 import static io.restassured.RestAssured.given;
 
 public class PensCurier {
 
-    private Courier courier;
     private final static String CREATE_PENS_COURIER = "/api/v1/courier";
-    private final static String LOGIN_PENS_COURIER ="/api/v1/courier/login";
+    private final static String LOGIN_PENS_COURIER = "/api/v1/courier/login";
+    private Courier courier;
 
     public void setCourier(Courier courier) {
         this.courier = courier;
@@ -38,8 +38,7 @@ public class PensCurier {
                 .when()
                 .post(LOGIN_PENS_COURIER);
         return response;
-
-        }
+    }
 
     //Ручка для запроса id
     @Step("Запрос Id")
@@ -63,9 +62,6 @@ public class PensCurier {
             given().delete("/api/v1/courier/" + id);
         }
     }
-
-
-
 }
 
 
